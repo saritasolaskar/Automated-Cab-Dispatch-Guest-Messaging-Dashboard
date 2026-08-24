@@ -130,14 +130,14 @@ def build_message(row, reporting_date, drop_addr):
     msg = (
         f"Vehicle and driver details for\n"
         f"Passenger: {passenger_name}\n"
-        f"Number :- {passenger_no}\n\n"
+        f"Number :- {passenger_no}\n"
+          f"Reporting address :- {reporting_address}\n\n"
         f"Driver: {driver_name if driver_name else 'TBD'}\n"
         f"Number: {driver_no if driver_no else 'TBD'}\n"
         f"Vehicle: {vehicle_no if vehicle_no else 'TBD'}\n"
         f"Vehicle : {cab_type}\n"
         f"Reporting on {reporting_date} at {pickup_time if pickup_time else 'TBD'}\n\n"
-        f"Reporting address :- {reporting_address}\n"
-        f"Drop Address :-{drop_addr}"
+        f"Drop Address :-{drop_address}"
     )
     return msg, missing_fields
 
